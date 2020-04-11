@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 public class VirusInfoController {
-    @GetMapping(value = "/info")
+    @GetMapping(value = "/")
     public ResponseEntity<List<Statistics>> read() {
         List<Statistics> statisticsList = new InfoChecker().getInfo();
 
