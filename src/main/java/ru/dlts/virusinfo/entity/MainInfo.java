@@ -5,12 +5,21 @@ import lombok.Data;
 @Data
 public class MainInfo {
     String date;
-    String infected;
-    String infectedPlus;
-    String healed;
-    String healedPlus;
-    String die;
-    String diePlus;
+    Long infected;
+    Long infectedPlus;
+    Long healed;
+    Long healedPlus;
+    Long die;
+    Long diePlus;
+    Long active;
     String testsCount;
     String testsPlus;
+
+    public Long getActive() {
+        return infected-healed-die;
+    }
+
+    public void setActive(Long active) {
+        this.active = infected-healed-die;
+    }
 }
