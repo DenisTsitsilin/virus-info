@@ -51,12 +51,14 @@ public class InfoChecker {
             Elements tds = doc.getElementsByClass("d-map__counter");
             for (Element td : tds) {
                 Elements h3 = td.getElementsByTag("h3");
-                mainInfo.setStickPlus(h3.get(0).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
-                mainInfo.setStick(h3.get(0).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getStickPlus(),""));
-                mainInfo.setHealedPlus(h3.get(1).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
-                mainInfo.setHealed(h3.get(1).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getHealedPlus(),""));
-                mainInfo.setDiePlus(h3.get(2).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
-                mainInfo.setDie(h3.get(2).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getDiePlus(),""));
+                mainInfo.setTestsPlus(h3.get(0).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
+                mainInfo.setTestsCount(h3.get(0).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getTestsPlus(),""));
+                mainInfo.setInfectedPlus(h3.get(1).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
+                mainInfo.setInfected(h3.get(1).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getInfectedPlus(),""));
+                mainInfo.setHealedPlus(h3.get(2).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
+                mainInfo.setHealed(h3.get(2).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getHealedPlus(),""));
+                mainInfo.setDiePlus(h3.get(3).getElementsByTag("sup").text().replaceAll(" ", "").replaceAll("[+]", ""));
+                mainInfo.setDie(h3.get(3).text().replaceAll(" ", "").replaceAll("[+]", "").replaceAll(mainInfo.getDiePlus(),""));
             }
         } catch (IOException e) {
             e.printStackTrace();

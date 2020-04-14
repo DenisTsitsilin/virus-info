@@ -2,15 +2,15 @@ package ru.dlts.virusinfo.entity;
 
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 public class MainInfo {
     String date;
-    String stick;
-    String stickPlus;
+    String infected;
+    String infectedPlus;
     String healed;
     String healedPlus;
     String die;
     String diePlus;
+    String testsCount;
+    String testsPlus;
 }
